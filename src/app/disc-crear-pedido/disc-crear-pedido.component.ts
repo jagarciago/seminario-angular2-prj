@@ -12,9 +12,11 @@ import { Pedido } from '../model/Pedido.model';
 export class DiscCrearPedidoComponent implements OnInit {
 
     crearPedido:Pedido;
+
   constructor() {
     this.crearPedido = new Pedido();
-
+    this.crearPedido.nombre = "angulamiento";
+    
    }
 
   ngOnInit() {
