@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Http } from '@angular/http';
 
+import { Pedido } from '../model/Pedido.model';
+
 @Component({
   selector: 'app-disc-crear-pedido',
   templateUrl: './disc-crear-pedido.component.html',
@@ -9,7 +11,11 @@ import { Http } from '@angular/http';
 })
 export class DiscCrearPedidoComponent implements OnInit {
 
-  constructor() { }
+    crearPedido:Pedido;
+  constructor() {
+    this.crearPedido = new Pedido();
+
+   }
 
   ngOnInit() {
   }
