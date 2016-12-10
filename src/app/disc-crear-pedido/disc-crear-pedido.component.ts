@@ -13,13 +13,18 @@ export class DiscCrearPedidoComponent implements OnInit {
 
     crearPedido:Pedido;
 
-  constructor() {
+  constructor(private http:Http) {
     this.crearPedido = new Pedido();
-    this.crearPedido.nombre = "angulamiento";
     
+
    }
 
   ngOnInit() {
   }
 
+public guardarPedido(){
+  alert("pedido guardado: " + this.crearPedido.cedula);
 }
+
+}
+
