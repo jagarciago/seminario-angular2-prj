@@ -8,26 +8,46 @@
                           <b class="black-text"><h4>Que Se Te Antoja !!! </h4></b> 
                         <div class="row">
                             <div class="input-field col s6">
-                            <input id="principio" type="text" class="validate">
-                            <label class="active black" for="principio"><b>Principio</b></label>
+                            <input id="principio" 
+                                   type="text" 
+                                   class="validate">
+                            <label class="active black" 
+                                   for="principio" 
+                                   data-error="wrong" 
+                                   data-success="Ok"><b>principio</b></label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
-                            <input id="sopa" type="text" class="validate">
-                            <label class="active black" for="sopa"><b>Sopa</b></label>
+                            <input id="sopa" 
+                                   type="text" 
+                                   class="validate">
+                            <label class="active black" 
+                                   for="sopa"
+                                   data-error="wrong" 
+                                   data-success="Ok"><b>Sopa</b></label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
-                            <input id="bebida" type="text" class="validate">
-                            <label class="active black" for="bebida"><b>Bebida</b></label>
+                            <input id="bebida" 
+                                   type="text" 
+                                   class="validate">
+                            <label class="active black" 
+                                   for="bebida" 
+                                   data-error="wrong" 
+                                   data-success="Ok"><b>Bebida</b></label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
-                            <input id="postre" type="text" class="validate">
-                            <label class="active black" for="postre"><b>Postre</b></label>
+                            <input id="postre" 
+                                   type="text" 
+                                   class="validate">
+                            <label class="active black" 
+                                   for="postre" 
+                                   data-error="wrong" 
+                                   data-success="Ok"><b>Postre</b></label>
                             </div>
                         </div>
                             
@@ -113,7 +133,7 @@
                                         type="text" 
                                         class="validate"
                                         [class.invalid]="!tipoPagoTxt.valid"
-                                        name="direccion"
+                                        name="tipo_pago"
                                         #tipoPagoTxt="ngModel"
                                         [(ngModel)]="crearPedido.tipo_pago"
                                         required>

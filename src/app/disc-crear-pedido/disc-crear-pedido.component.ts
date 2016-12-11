@@ -11,9 +11,10 @@ import { Pedido } from '../model/Pedido.model';
 })
 export class DiscCrearPedidoComponent implements OnInit {
 
-    crearPedido:Pedido;
+    private crearPedido:Pedido;
 
   constructor(private http:Http) {
+
     this.crearPedido = new Pedido();
     
 
@@ -22,9 +23,21 @@ export class DiscCrearPedidoComponent implements OnInit {
   ngOnInit() {
   }
 
-public guardarPedido(){
-  alert("pedido guardado: " + this.crearPedido.cedula);
-}
+public guardarPedido()
+{
+  this.http.post(
+   "http://www.alex2016.net23.net/seminario/bd/domicilios.php",
+    this.crearPedido
+  ).subscribe((response)=>{
+    let respuesta = response.json();
+    if(respuesta.resultado == 1){
+      alert("pedido guardado ccon exito");
+    }
+    else{
+      alert("Error al guardar pedido")
+    }
+  });
 
+  }
 }
 
